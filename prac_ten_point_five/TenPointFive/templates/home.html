@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App home</title>
+</head>
+<body>
+    <h3>Join Filter: Members({{names | join:", "}})</h3>
+    <h3>Date Filter: {{ birthday|date:"SHORT_DATE_FORMAT" }}</h3>
+    <h3>Add filter: {{num}} after adding 10 </h3>
+    <ul>
+        {%for n in num%}
+            <li>{{n|add:10}}</li>
+        {% endfor %}
+    </ul>
+    <h3>Capfirst Filter: {{ author | capfirst }}.</h3>
+    <h3>{{ text | cut:" " }}</h3>
+    <h3>{{product_prices}}</h3>
+    <h3>Dictsort Filter: {{ product_prices | dictsort:"price" }}</h3>
+    <h3>First Filter: {{ names | first }}</h3>
+    <h3>Last Filter: {{ names | last }}</h3>
+    <h3>Length Filter: {{ names | length }}</h3>
+    <h3>Linenumbers Filter: {{ names | linenumbers }}</h3>
+    <h4>Lower Filter: {{ text | lower }}</h4>
+    <h4>Upper Filter: {{ text | upper }}</h4>
+    <h4>Title Filter: {{ text | title }}</h4>
+    <h4>Random Filter: {{ num | random }}</h4>
+    <h4>Slice Filter: {{ names | slice:":2" }}</h4>
+    <h4>Time Filter: {{ birthday| time:"H:i" }}</h4>
+    <h4>Timesince Filter: {{ article_date| timesince}}</h4>
+    <h4>Truncatechars Filter: {{ text | truncatechars:15 }}</h4>
+    <h4>Wordcount Filter: {{ text | wordcount }}</h4>
+    <h4>Striptags Filter: </h4><b>I</b> <button>love</button> <span>dogs</span>|striptags
+    <h4>Make_list Filter: {{ author | make_list }}</h4>
+</body>
+</html>
