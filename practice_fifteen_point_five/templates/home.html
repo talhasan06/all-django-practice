@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content%}
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Musician Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Instrument Type</th>
+            <th scope="col">Album Rating</th>
+            <th scope="col">Album Name</th>
+            <th scope="col">Release Date</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for musician in  musicians %}
+            <tr>
+              <td>{{musician.first_name}} {{musician.last_name}}</td>
+              <td>{{musician.email}}</td>
+              <td>{{musician.instrument_type}}</td>
+              <td>
+              </td>
+              <td>
+                <a href="">edit</a>
+                <a href="">delete</a>
+              </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+</div>
+{% endblock %}
