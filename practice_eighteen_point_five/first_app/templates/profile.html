@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="width:50%;margin: auto;" class="text-center py-5">
+    <h1>This is profile page</h1>
+    <h4>Content coming soon</h4>
+    <div>
+        <a href="{% url 'pass_change' %}">change password</a>
+    </div>
+    <div>
+        <a href="{% url 'pass_change2' %}">change password without old password</a>
+    </div>
+</div>
+{% endblock %}
